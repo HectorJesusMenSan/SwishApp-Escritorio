@@ -1,0 +1,16 @@
+C:\Users\hecto\Documents\SwishApp\SwishApp\bin\Debug\net10.0-windows\SwishApp.exe
+C:\Users\hecto\Documents\SwishApp\SwishApp\bin\Debug\net10.0-windows\SwishApp.deps.json
+C:\Users\hecto\Documents\SwishApp\SwishApp\bin\Debug\net10.0-windows\SwishApp.runtimeconfig.json
+C:\Users\hecto\Documents\SwishApp\SwishApp\bin\Debug\net10.0-windows\SwishApp.dll
+C:\Users\hecto\Documents\SwishApp\SwishApp\bin\Debug\net10.0-windows\SwishApp.pdb
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.AssemblyInfoInputs.cache
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.AssemblyInfo.cs
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.csproj.CoreCompileInputs.cache
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.dll
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\refint\SwishApp.dll
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.pdb
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.genruntimeconfig.cache
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\ref\SwishApp.dll
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.FormRegistro.resources
+C:\Users\hecto\Documents\SwishApp\SwishApp\obj\Debug\net10.0-windows\SwishApp.csproj.GenerateResource.cache
