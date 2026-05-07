@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SwishApp
+namespace SwishApp.Vista
 {
     public class FormIndex : Form
     {
@@ -18,7 +18,7 @@ namespace SwishApp
             // ============================
             this.Text = "Swish App - Torneo";
             this.BackColor = ColorTranslator.FromHtml("#121212");
-            this.Size = new Size(600, 550);
+            this.Size = new Size(700, 650);
 
             // ============================
             // HEADER
@@ -145,6 +145,18 @@ namespace SwishApp
             btn.FlatStyle = FlatStyle.Flat;
 
             this.Controls.Add(btn);
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // FormIndex
+            // 
+            ClientSize = new Size(1129, 681);
+            Name = "FormIndex";
+            ResumeLayout(false);
+
         }
     }
 }

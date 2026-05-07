@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SwishApp.Modelo
+{
+    internal class Jugador
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Posicion { get; set; }
+        public int numero { get; set; }
+        public int IdEquipo { get; set; }
+    }
+}

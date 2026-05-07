@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SwishApp
+namespace SwishApp.Vista
 {
     public class FormClasificacion : Form
     {
@@ -100,7 +100,7 @@ namespace SwishApp
             tabla.Size = new Size(640, 200);
             tabla.Location = new Point(20, 240);
             tabla.BackgroundColor = ColorTranslator.FromHtml("#1c1c1c");
-            tabla.ForeColor = Color.White;
+            tabla.ForeColor = Color.Black;
             tabla.ColumnCount = 8;
 
             tabla.Columns[0].Name = "Pos";

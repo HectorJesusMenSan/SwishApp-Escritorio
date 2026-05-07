@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using SwishApp.Vista;
 
 namespace SwishApp
 {
@@ -9,7 +10,7 @@ namespace SwishApp
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormClasificacion());
+            Application.Run(new FormIndex());
         }
     }
 }

@@ -1,30 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hecto\\Documents\\SwishApp\\",
+  "WorkspaceRootPath": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\dao\\registrodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\dao\\registrodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\formclasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\formclasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\formtorneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\formtorneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\formestadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\formestadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\controlador\\equiposcontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\controlador\\equiposcontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\formindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\formindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\swishapp\\swishapp\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72C545ED-6889-4771-A8FD-9FBA4F8E062F}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\dao\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\dao\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\estadisticasporpartido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\estadisticasporpartido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formclasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formclasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formclasificacion.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formclasificacion.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formtorneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\vista\\formtorneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +74,205 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormClasificacion.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormClasificacion.cs",
-              "RelativeDocumentMoniker": "SwishApp\\FormClasificacion.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormClasificacion.cs",
-              "RelativeToolTip": "SwishApp\\FormClasificacion.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAQwM4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FormRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormRegistro.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SwishApp\\Vista\\FormRegistro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T15:49:53.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:25:42.587Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormEstadisticas.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormEstadisticas.cs",
-              "RelativeDocumentMoniker": "SwishApp\\FormEstadisticas.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormEstadisticas.cs",
-              "RelativeToolTip": "SwishApp\\FormEstadisticas.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAQwL4AAAAAAAAAAAAAAA==",
+              "Title": "EquiposControlador.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Controlador\\EquiposControlador.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Controlador\\EquiposControlador.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Controlador\\EquiposControlador.cs",
+              "RelativeToolTip": "SwishApp\\Controlador\\EquiposControlador.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T15:43:53.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormTorneo.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormTorneo.cs",
-              "RelativeDocumentMoniker": "SwishApp\\FormTorneo.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormTorneo.cs",
-              "RelativeToolTip": "SwishApp\\FormTorneo.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T15:39:32.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormIndex.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormIndex.cs",
-              "RelativeDocumentMoniker": "SwishApp\\FormIndex.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormIndex.cs",
-              "RelativeToolTip": "SwishApp\\FormIndex.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAIkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T15:23:01.683Z",
+              "WhenOpened": "2026-05-07T14:50:59.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RegistroDao.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\RegistroDao.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Dao\\RegistroDao.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\RegistroDao.cs",
+              "RelativeToolTip": "SwishApp\\Dao\\RegistroDao.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T14:36:21.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EstadisticasPorPartido.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\EstadisticasPorPartido.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Modelo\\EstadisticasPorPartido.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\EstadisticasPorPartido.cs",
+              "RelativeToolTip": "SwishApp\\Modelo\\EstadisticasPorPartido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:33:13.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Partido.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Partido.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Modelo\\Partido.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Partido.cs",
+              "RelativeToolTip": "SwishApp\\Modelo\\Partido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:32:42.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Equipo.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Equipo.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Modelo\\Equipo.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Equipo.cs",
+              "RelativeToolTip": "SwishApp\\Modelo\\Equipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:31:16.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Jugador.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Jugador.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Modelo\\Jugador.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Jugador.cs",
+              "RelativeToolTip": "SwishApp\\Modelo\\Jugador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:31:03.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Torneo.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Torneo.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Modelo\\Torneo.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Torneo.cs",
+              "RelativeToolTip": "SwishApp\\Modelo\\Torneo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:30:45.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\Conexion.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Dao\\Conexion.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\Conexion.cs",
+              "RelativeToolTip": "SwishApp\\Dao\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T18:25:07.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SwishApp.csproj",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\SwishApp.csproj",
+              "RelativeDocumentMoniker": "SwishApp\\SwishApp.csproj",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\SwishApp.csproj",
+              "RelativeToolTip": "SwishApp\\SwishApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T18:22:14.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormClasificacion.resx",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormClasificacion.resx",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormClasificacion.resx",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormClasificacion.resx",
+              "RelativeToolTip": "SwishApp\\Vista\\FormClasificacion.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-04-29T18:35:38.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormClasificacion.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormClasificacion.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormClasificacion.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormClasificacion.cs",
+              "RelativeToolTip": "SwishApp\\Vista\\FormClasificacion.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAQwGUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:49:53.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormTorneo.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormTorneo.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormTorneo.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormTorneo.cs",
+              "RelativeToolTip": "SwishApp\\Vista\\FormTorneo.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAqwKIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:39:32.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormIndex.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormIndex.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormIndex.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormIndex.cs",
+              "RelativeToolTip": "SwishApp\\Vista\\FormIndex.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:23:01.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Program.cs",
               "RelativeDocumentMoniker": "SwishApp\\Program.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\Program.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Program.cs",
               "RelativeToolTip": "SwishApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T15:21:40.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "FormRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormRegistro.cs",
-              "RelativeDocumentMoniker": "SwishApp\\FormRegistro.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\SwishApp\\SwishApp\\FormRegistro.cs",
-              "RelativeToolTip": "SwishApp\\FormRegistro.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwGAAAAA1AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs",
+              "RelativeDocumentMoniker": "SwishApp\\Vista\\FormRegistro.cs",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs",
+              "RelativeToolTip": "SwishApp\\Vista\\FormRegistro.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAcwHcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T15:19:54.694Z",
               "EditorCaption": ""
