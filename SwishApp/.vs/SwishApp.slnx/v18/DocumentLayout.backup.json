@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\dao\\registrodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\dao\\registrodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\controlador\\equiposcontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\dao\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\dao\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,24 +47,8 @@
       "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\estadisticasporpartido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\partido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\modelo\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|solutionrelative:swishapp\\swishapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FC86D4C-8E30-3C61-8E5C-3411432EAD48}|SwishApp\\SwishApp.csproj|c:\\users\\hecto\\documents\\gits\\swishapp-escritorio\\swishapp\\swishapp\\vista\\formindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "FormRegistro.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs",
               "RelativeDocumentMoniker": "SwishApp\\Vista\\FormRegistro.cs",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "EquiposControlador.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Controlador\\EquiposControlador.cs",
               "RelativeDocumentMoniker": "SwishApp\\Controlador\\EquiposControlador.cs",
@@ -103,20 +103,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "RegistroDao.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\RegistroDao.cs",
               "RelativeDocumentMoniker": "SwishApp\\Dao\\RegistroDao.cs",
-              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\RegistroDao.cs*",
-              "RelativeToolTip": "SwishApp\\Dao\\RegistroDao.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBIAAABJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\RegistroDao.cs",
+              "RelativeToolTip": "SwishApp\\Dao\\RegistroDao.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T14:36:21.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "EstadisticasPorPartido.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\EstadisticasPorPartido.cs",
               "RelativeDocumentMoniker": "SwishApp\\Modelo\\EstadisticasPorPartido.cs",
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Partido.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Partido.cs",
               "RelativeDocumentMoniker": "SwishApp\\Modelo\\Partido.cs",
@@ -142,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Equipo.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Equipo.cs",
               "RelativeDocumentMoniker": "SwishApp\\Modelo\\Equipo.cs",
@@ -155,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Jugador.cs",
               "RelativeDocumentMoniker": "SwishApp\\Modelo\\Jugador.cs",
@@ -168,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Torneo.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Modelo\\Torneo.cs",
               "RelativeDocumentMoniker": "SwishApp\\Modelo\\Torneo.cs",
@@ -181,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Dao\\Conexion.cs",
               "RelativeDocumentMoniker": "SwishApp\\Dao\\Conexion.cs",
@@ -194,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "SwishApp.csproj",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\SwishApp.csproj",
               "RelativeDocumentMoniker": "SwishApp\\SwishApp.csproj",
@@ -202,7 +202,8 @@
               "RelativeToolTip": "SwishApp\\SwishApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-04T18:22:14.815Z"
+              "WhenOpened": "2026-05-04T18:22:14.815Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -253,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Program.cs",
               "RelativeDocumentMoniker": "SwishApp\\Program.cs",
@@ -266,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FormRegistro.cs",
               "DocumentMoniker": "C:\\Users\\hecto\\Documents\\Gits\\SwishApp-Escritorio\\SwishApp\\SwishApp\\Vista\\FormRegistro.cs",
               "RelativeDocumentMoniker": "SwishApp\\Vista\\FormRegistro.cs",

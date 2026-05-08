@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SwishApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47a8967317ec1492fd54e86790bf290a82f4bf18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab420aa115646b97fc74412ff60c50e2b348f31c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SwishApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SwishApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
