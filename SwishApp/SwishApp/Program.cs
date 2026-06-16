@@ -1,16 +1,17 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
-using SwishApp.Vista;
+using SwishApp.Vistas;
 
 namespace SwishApp
 {
-    internal static class Program
+    static class Program
     {
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
-            Application.Run(new FormIndex());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmLogin());
         }
     }
 }
