@@ -19,6 +19,7 @@ namespace SwishApp.Vistas
             InitializeComponent();
             ConfigurarFormulario();
             CargarPartidos();
+            NavBar.Agregar(this);
         }
 
         // =====================================================
@@ -234,6 +235,8 @@ namespace SwishApp.Vistas
         // =====================================================
         // BOTÓN PARTIDO
         // =====================================================
+
+
         private void BtnPartido_Click(object sender, EventArgs e)
         {
             var btn = (Button)sender;
@@ -241,18 +244,26 @@ namespace SwishApp.Vistas
 
             if (partido.Estado == "FINALIZADO")
             {
-                var frmRanking = new FrmRanking(App.IdTorneoActivo);
-                frmRanking.Show();
+                var frmEst = new FrmEstadisticas(App.IdTorneoActivo, this);
+                frmEst.Show();
                 this.Hide();
+                return;
             }
-            else
-            {
-                var frmCaptura = new FrmCaptura(partido.Id, this);
-                frmCaptura.Show();
-                this.Hide();
-            }
-        }
 
+            // Caso borde: BYE que no fue filtrado
+            if (partido.Bye || partido.IdEquipoB == 0)
+            {
+                var logica = new SwishApp.Logica.TorneoLogica();
+                logica.FinalizarPartido(partido);
+                CargarPartidos();
+                return;
+            }
+
+            // Partido normal → captura
+            var frmCaptura = new FrmCaptura(partido.Id, this);
+            frmCaptura.Show();
+            this.Hide();
+        }
         // =====================================================
         // FINALIZAR TORNEO
         // =====================================================

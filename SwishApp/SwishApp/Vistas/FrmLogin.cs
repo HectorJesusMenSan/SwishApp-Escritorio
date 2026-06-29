@@ -28,7 +28,7 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Swish App - Login";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(400, 500);
+            this.Size = new Size(520, 620);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
@@ -40,7 +40,7 @@ namespace SwishApp.Vistas
                 Text = "🏀",
                 Font = new Font("Arial", 40),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 40),
+                Location = new Point(60, 40),
                 Size = new Size(400, 60),
                 AutoSize = false
             };
@@ -51,7 +51,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 22, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 105),
+                Location = new Point(60, 105),
                 Size = new Size(400, 40),
                 AutoSize = false
             };
@@ -62,7 +62,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(170, 170, 170),
                 Font = new Font("Arial", 10),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 148),
+                Location = new Point(60, 148),
                 Size = new Size(400, 25),
                 AutoSize = false
             };
@@ -83,7 +83,7 @@ namespace SwishApp.Vistas
             txtUsername = new TextBox
             {
                 Location = new Point(30, 215),
-                Size = new Size(340, 30),
+                Size = new Size(440, 36),
                 BackColor = Color.FromArgb(40, 40, 40),
                 ForeColor = Color.White,
                 Font = new Font("Arial", 11),
@@ -103,7 +103,7 @@ namespace SwishApp.Vistas
             txtPassword = new TextBox
             {
                 Location = new Point(30, 278),
-                Size = new Size(340, 30),
+                Size = new Size(440, 36),
                 BackColor = Color.FromArgb(40, 40, 40),
                 ForeColor = Color.White,
                 Font = new Font("Arial", 11),
@@ -118,7 +118,7 @@ namespace SwishApp.Vistas
             {
                 Text = "Entrar",
                 Location = new Point(30, 330),
-                Size = new Size(340, 48),
+                Size = new Size(440, 54),
                 BackColor = Color.FromArgb(244, 123, 37),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -138,7 +138,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 9, FontStyle.Underline),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 395),
+                Location = new Point(60, 395),
                 Size = new Size(400, 25),
                 AutoSize = false,
                 Cursor = Cursors.Hand
@@ -201,7 +201,12 @@ namespace SwishApp.Vistas
 
             var frmInicio = new FrmInicio();
             frmInicio.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

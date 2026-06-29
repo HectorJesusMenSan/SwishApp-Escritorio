@@ -33,7 +33,7 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Ranking MVP";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(420, 700);
+            this.Size = new Size(430, 700);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.AutoScroll = true;

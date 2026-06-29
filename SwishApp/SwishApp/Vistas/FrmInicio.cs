@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using SwishApp.Modelo;
 using SwishApp.Modelo.Dao;
+using SwishApp.Vistas;
 
 namespace SwishApp.Vistas
 {
@@ -18,6 +19,7 @@ namespace SwishApp.Vistas
         {
             InitializeComponent();
             ConfigurarEstilos();
+            NavBar.Agregar(this);
         }
 
         // =====================================================
@@ -30,7 +32,7 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Swish App";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(400, 600);
+            this.Size = new Size(560, 680);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
@@ -43,8 +45,8 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 18, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 40),
-                Size = new Size(400, 40),
+                Location = new Point(60, 40),
+                Size = new Size(440, 40),
                 AutoSize = false
             };
 
@@ -54,7 +56,7 @@ namespace SwishApp.Vistas
             var pnlRafaga = CrearCard(
                 "🏀 Torneo Ráfaga",
                 "Eliminación directa, partidos rápidos.",
-                new Point(20, 120)
+                new Point(90, 120)
             );
 
             // =========================================
@@ -63,7 +65,7 @@ namespace SwishApp.Vistas
             var pnlVerTorneos = CrearCard(
                 "📅 Ver Torneos",
                 "Ver torneos existentes o finalizados.",
-                new Point(20, 240)
+                new Point(90, 240)
             );
 
             // =========================================
@@ -108,8 +110,8 @@ namespace SwishApp.Vistas
             var btnContinuar = new Button
             {
                 Text = "Continuar",
-                Location = new Point(20, 380),
-                Size = new Size(360, 50),
+                Location = new Point(60, 380),
+                Size = new Size(420, 56),
                 BackColor = Color.FromArgb(244, 123, 37),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -136,7 +138,7 @@ namespace SwishApp.Vistas
             var panel = new Panel
             {
                 Location = ubicacion,
-                Size = new Size(360, 90),
+                Size = new Size(520, 110),
                 BackColor = Color.FromArgb(28, 28, 28),
                 Cursor = Cursors.Hand
             };

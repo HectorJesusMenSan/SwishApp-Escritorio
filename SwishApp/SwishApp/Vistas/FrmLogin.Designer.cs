@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.SuspendLayout();
+            // 
+            // FrmLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmLogin";
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

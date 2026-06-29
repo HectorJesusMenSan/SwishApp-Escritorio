@@ -120,5 +120,85 @@ namespace SwishApp.Modelo.Dao
 
             return false;
         }
+        // =====================================================
+        // OBTENER HASH ALMACENADO (para validar contraseña actual)
+        // =====================================================
+        public string ObtenerHash(int idUsuario)
+        {
+            string sql = "SELECT password FROM usuario WHERE id = @id";
+
+            try
+            {
+                using (var con = Conexion.GetConexion())
+                using (var ps = new MySqlCommand(sql, con))
+                {
+                    ps.Parameters.AddWithValue("@id", idUsuario);
+
+                    object resultado = ps.ExecuteScalar();
+                    return resultado != null ? resultado.ToString() : "";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return "";
+            }
+        }
+
+        // =====================================================
+        // ACTUALIZAR USERNAME
+        // =====================================================
+        public bool ActualizarUsername(int idUsuario, string nuevoUsername)
+        {
+            string sql =
+                "UPDATE usuario SET username = @username WHERE id = @id";
+
+            try
+            {
+                using (var con = Conexion.GetConexion())
+                using (var ps = new MySqlCommand(sql, con))
+                {
+                    ps.Parameters.AddWithValue("@username", nuevoUsername);
+                    ps.Parameters.AddWithValue("@id", idUsuario);
+                    ps.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        // =====================================================
+        // ACTUALIZAR CONTRASEÑA (hashea automáticamente)
+        // =====================================================
+        public bool ActualizarPassword(int idUsuario, string nuevaPassword)
+        {
+            string sql =
+                "UPDATE usuario SET password = @password WHERE id = @id";
+
+            try
+            {
+                string nuevoHash = Contrasenia.HashPassword(nuevaPassword);
+
+                using (var con = Conexion.GetConexion())
+                using (var ps = new MySqlCommand(sql, con))
+                {
+                    ps.Parameters.AddWithValue("@password", nuevoHash);
+                    ps.Parameters.AddWithValue("@id", idUsuario);
+                    ps.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
     }
+
 }

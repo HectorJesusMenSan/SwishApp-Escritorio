@@ -42,6 +42,7 @@ namespace SwishApp.Vistas
 
             InitializeComponent();
             CargarDatos();
+            NavBar.Agregar(this);
         }
 
         // =====================================================
@@ -51,10 +52,105 @@ namespace SwishApp.Vistas
         {
             partido = partidoDao.BuscarPorId(idPartido);
             equipoA = equipoDao.BuscarPorId(partido.IdEquipoA);
-            equipoB = equipoDao.BuscarPorId(partido.IdEquipoB);
 
+            // BYE: no hay rival, mostrar pantalla simplificada
+            if (partido.Bye || partido.IdEquipoB == 0)
+            {
+                ConfigurarFormularioBye();
+                return;
+            }
+
+            equipoB = equipoDao.BuscarPorId(partido.IdEquipoB);
             ConfigurarFormulario();
             CargarJugadores();
+        }
+
+        // ── Nuevo método: agregar después de CargarDatos() ────
+        private void ConfigurarFormularioBye()
+        {
+            this.BackColor = Color.FromArgb(18, 18, 18);
+            this.ForeColor = Color.White;
+            this.Text = "Partido — BYE";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Size = new Size(420, 300);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
+            var lblIcon = new Label
+            {
+                Text = "🏆",
+                Font = new Font("Arial", 36),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new Point(0, 28),
+                Size = new Size(420, 60),
+                AutoSize = false
+            };
+
+            var lblTitulo = new Label
+            {
+                Text = "BYE — Avance automático",
+                ForeColor = Color.FromArgb(244, 123, 37),
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new Point(0, 98),
+                Size = new Size(420, 28),
+                AutoSize = false
+            };
+
+            var lblDesc = new Label
+            {
+                Text = (equipoA?.Nombre ?? "Equipo") + " avanza sin rival en esta ronda.",
+                ForeColor = Color.FromArgb(170, 170, 170),
+                Font = new Font("Arial", 10),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new Point(0, 132),
+                Size = new Size(420, 22),
+                AutoSize = false
+            };
+
+            var btnConfirmar = new Button
+            {
+                Text = "Confirmar avance",
+                Location = new Point(20, 170),
+                Size = new Size(380, 48),
+                BackColor = Color.FromArgb(244, 123, 37),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Arial", 11, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            btnConfirmar.FlatAppearance.BorderSize = 0;
+            btnConfirmar.Click += (s, e) =>
+            {
+                logica.FinalizarPartido(partido);
+                frmPartidos.CargarPartidos();
+                frmPartidos.Show();
+                this.Close();
+            };
+
+            var btnVolver = new Button
+            {
+                Text = "← Volver",
+                Location = new Point(20, 232),
+                Size = new Size(380, 36),
+                BackColor = Color.FromArgb(40, 40, 40),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Arial", 10),
+                Cursor = Cursors.Hand
+            };
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.Click += (s, e) =>
+            {
+                frmPartidos.Show();
+                this.Close();
+            };
+
+            this.Controls.Add(lblIcon);
+            this.Controls.Add(lblTitulo);
+            this.Controls.Add(lblDesc);
+            this.Controls.Add(btnConfirmar);
+            this.Controls.Add(btnVolver);
         }
 
         // =====================================================
@@ -66,7 +162,7 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Captura de Datos";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(420, 700);
+            this.Size = new Size(620, 920);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.AutoScroll = true;
@@ -83,7 +179,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 22, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 15),
+                Location = new Point(90, 50),
                 Size = new Size(420, 40),
                 AutoSize = false
             };
@@ -94,7 +190,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(170, 170, 170),
                 Font = new Font("Arial", 10),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 58),
+                Location = new Point(90, 95),
                 Size = new Size(420, 25),
                 AutoSize = false
             };
@@ -107,7 +203,7 @@ namespace SwishApp.Vistas
             // =========================================
             var panelTabs = new Panel
             {
-                Location = new Point(15, 90),
+                Location = new Point(95, 120),
                 Size = new Size(385, 45),
                 BackColor = Color.FromArgb(28, 28, 28)
             };
@@ -160,8 +256,8 @@ namespace SwishApp.Vistas
             // =========================================
             panelEquipoA = new Panel
             {
-                Location = new Point(15, 145),
-                Size = new Size(385, 460),
+                Location = new Point(90, 170),
+                Size = new Size(420, 580),
                 AutoScroll = true,
                 BackColor = Color.FromArgb(18, 18, 18),
                 Visible = true
@@ -169,8 +265,8 @@ namespace SwishApp.Vistas
 
             panelEquipoB = new Panel
             {
-                Location = new Point(15, 145),
-                Size = new Size(385, 460),
+                Location = new Point(90, 170),
+                Size = new Size(420, 580),
                 AutoScroll = true,
                 BackColor = Color.FromArgb(18, 18, 18),
                 Visible = false
@@ -185,7 +281,7 @@ namespace SwishApp.Vistas
             var btnFinalizar = new Button
             {
                 Text = "Finalizar Partido",
-                Location = new Point(15, 615),
+                Location = new Point(105,780),
                 Size = new Size(385, 50),
                 BackColor = Color.FromArgb(244, 123, 37),
                 ForeColor = Color.White,
@@ -247,7 +343,7 @@ namespace SwishApp.Vistas
 
             var card = new Panel
             {
-                Size = new Size(380, 110),
+                Size = new Size(580, 124),
                 BackColor = expuls
                     ? Color.FromArgb(30, 30, 30)
                     : Color.FromArgb(28, 28, 28)
@@ -445,5 +541,10 @@ namespace SwishApp.Vistas
             int nRightRect, int nBottomRect,
             int nWidthEllipse, int nHeightEllipse
         );
+
+        private void FrmCaptura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

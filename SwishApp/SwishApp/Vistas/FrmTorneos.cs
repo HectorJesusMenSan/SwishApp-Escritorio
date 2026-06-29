@@ -17,6 +17,7 @@ namespace SwishApp.Vistas
             InitializeComponent();
             ConfigurarEstilos();
             CargarTorneos();
+            NavBar.Agregar(this);
         }
 
         // =====================================================
@@ -40,25 +41,25 @@ namespace SwishApp.Vistas
         {
             this.Controls.Clear();
 
-            // Título
+            // ── Título ──────────────────────────────────────
             var lblTitulo = new Label
             {
                 Text = "Torneos",
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 18, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 20),
+                Location = new Point(0, 40),
                 Size = new Size(400, 40),
                 AutoSize = false
             };
 
             this.Controls.Add(lblTitulo);
 
-            // Panel scrollable
+            // ── Panel scrollable (reducido 60px abajo para el botón) ──
             var panel = new Panel
             {
                 Location = new Point(0, 70),
-                Size = new Size(400, 460),
+                Size = new Size(400, 400),   // antes 460 — se acorta para el botón
                 AutoScroll = true,
                 BackColor = Color.FromArgb(18, 18, 18)
             };
@@ -80,17 +81,43 @@ namespace SwishApp.Vistas
                 };
 
                 panel.Controls.Add(lblVacio);
-                return;
+                // NO hacemos return aquí — el botón de abajo debe agregarse igual
             }
-
-            int y = 10;
-
-            foreach (var t in torneos)
+            else
             {
-                var card = CrearCardTorneo(t, y);
-                panel.Controls.Add(card);
-                y += 160;
+                int y = 10;
+
+                foreach (var t in torneos)
+                {
+                    var card = CrearCardTorneo(t, y);
+                    panel.Controls.Add(card);
+                    y += 160;
+                }
             }
+
+            // ── Botón ← Inicio (siempre visible) ────────────
+            // ── Botón ← Inicio (siempre visible) ────────────
+            var btnInicio = new Button
+            {
+                Text = "← Inicio",
+                Location = new Point(10, 480),   // ← corregido (antes 70)
+                Size = new Size(380, 48),    // ← corregido (antes Size(3, 48))
+                BackColor = Color.FromArgb(42, 42, 42),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Arial", 11, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+
+            btnInicio.FlatAppearance.BorderSize = 0;
+            btnInicio.Click += (s, e) =>
+            {
+                var frmInicio = new FrmInicio();
+                frmInicio.Show();
+                this.Close();
+            };
+
+            this.Controls.Add(btnInicio);
         }
 
         // =====================================================

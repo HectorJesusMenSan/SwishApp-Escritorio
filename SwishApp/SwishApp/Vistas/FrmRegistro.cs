@@ -29,6 +29,7 @@ namespace SwishApp.Vistas
             InitializeComponent();
             ConfigurarFormulario();
             CargarEquipos();
+            NavBar.Agregar(this);
         }
 
         // =====================================================
@@ -40,206 +41,188 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Registro de Equipos";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(420, 750);
+            // Form más alto para que todo quepa cómodamente
+            this.Size = new Size(480, 920);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.AutoScroll = true;
 
-            // =========================================
-            // TÍTULO
-            // =========================================
-            var lblTitulo = new Label
+            int margen = 16;
+            int ancho = 448; // 480 - 2*margen
+
+            // ── TÍTULO ────────────────────────────────────
+            // Y=64 → deja 46px para NavBar + 18px de margen
+            this.Controls.Add(new Label
             {
                 Text = "Registro de Equipos",
                 ForeColor = Color.FromArgb(244, 123, 37),
-                Font = new Font("Arial", 16, FontStyle.Bold),
+                Font = new Font("Arial", 17, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 15),
-                Size = new Size(420, 35),
+                Location = new Point(0, 64),
+                Size = new Size(480, 36),
                 AutoSize = false
-            };
+            });
 
-            this.Controls.Add(lblTitulo);
+            // =====================================================
+            // CARD — DATOS DEL EQUIPO  (baja 46px por NavBar)
+            // =====================================================
+            var cardEquipo = CrearCard(new Point(margen, 112), new Size(ancho, 235));
 
-            // =========================================
-            // SECCIÓN EQUIPO
-            // =========================================
-            var cardEquipo = CrearCard(new Point(15, 60), new Size(385, 220));
+            cardEquipo.Controls.Add(CrearSectionLabel("Datos del equipo", new Point(12, 12)));
 
-            var lblSecEquipo = new Label
-            {
-                Text = "Datos del equipo",
-                ForeColor = Color.White,
-                Font = new Font("Arial", 11, FontStyle.Bold),
-                Location = new Point(10, 10),
-                Size = new Size(360, 25),
-                AutoSize = false
-            };
+            txtNombreEquipo = CrearTextBox("Nombre del equipo", new Point(12, 42));
+            txtOrigen = CrearTextBox("Origen o ciudad", new Point(12, 88));
+            txtCategoria = CrearTextBox("Categoría", new Point(12, 134));
 
-            txtNombreEquipo = CrearTextBox("Nombre del equipo", new Point(10, 45));
-            txtOrigen = CrearTextBox("Origen o ciudad", new Point(10, 95));
-            txtCategoria = CrearTextBox("Categoría", new Point(10, 145));
+            var btnGuardar = CrearBoton(
+                "Guardar equipo",
+                new Point(12, 182),
+                new Size(ancho - 24, 40),
+                Color.FromArgb(244, 123, 37));
+            btnGuardar.Click += BtnGuardarEquipo_Click;
 
-            var btnGuardarEquipo = CrearBoton(
-                "Guardar Equipo",
-                new Point(10, 180),
-                new Size(365, 35),
-                Color.FromArgb(244, 123, 37)
-            );
-
-            btnGuardarEquipo.Click += BtnGuardarEquipo_Click;
-
-            cardEquipo.Controls.Add(lblSecEquipo);
             cardEquipo.Controls.Add(txtNombreEquipo);
             cardEquipo.Controls.Add(txtOrigen);
             cardEquipo.Controls.Add(txtCategoria);
-            cardEquipo.Controls.Add(btnGuardarEquipo);
-
+            cardEquipo.Controls.Add(btnGuardar);
             this.Controls.Add(cardEquipo);
 
-            // =========================================
-            // SECCIÓN JUGADORES
-            // =========================================
-            var cardJugador = CrearCard(new Point(15, 295), new Size(385, 360));
+            // =====================================================
+            // CARD — INTEGRANTES  (baja con el resto del layout)
+            // Height=370 para que btnNuevoEquipo quepa holgado
+            // =====================================================
+            var cardJugador = CrearCard(new Point(margen, 362), new Size(ancho, 370));
 
-            var lblSecJugador = new Label
-            {
-                Text = "Integrantes",
-                ForeColor = Color.White,
-                Font = new Font("Arial", 11, FontStyle.Bold),
-                Location = new Point(10, 10),
-                Size = new Size(360, 25),
-                AutoSize = false
-            };
+            cardJugador.Controls.Add(CrearSectionLabel("Integrantes del equipo", new Point(12, 12)));
 
-            txtNombreJugador = CrearTextBox("Nombre del jugador", new Point(10, 45));
+            txtNombreJugador = CrearTextBox("Nombre del jugador", new Point(12, 42));
 
-            var lblNumero = new Label
+            // Fila número + posición
+            cardJugador.Controls.Add(new Label
             {
                 Text = "Número",
-                ForeColor = Color.FromArgb(170, 170, 170),
+                ForeColor = Color.FromArgb(150, 150, 150),
                 Font = new Font("Arial", 9),
-                Location = new Point(10, 90),
-                Size = new Size(100, 20),
+                Location = new Point(12, 92),
+                Size = new Size(80, 18),
                 AutoSize = false
-            };
+            });
 
             nudNumero = new NumericUpDown
             {
-                Location = new Point(10, 110),
-                Size = new Size(100, 30),
-                BackColor = Color.FromArgb(40, 40, 40),
+                Location = new Point(12, 112),
+                Size = new Size(90, 34),
+                BackColor = Color.FromArgb(38, 38, 38),
                 ForeColor = Color.White,
-                Font = new Font("Arial", 10),
+                Font = new Font("Arial", 11),
                 Minimum = 0,
-                Maximum = 99
+                Maximum = 99,
+                BorderStyle = BorderStyle.FixedSingle
             };
 
-            var lblPosicion = new Label
+            cardJugador.Controls.Add(new Label
             {
                 Text = "Posición",
-                ForeColor = Color.FromArgb(170, 170, 170),
+                ForeColor = Color.FromArgb(150, 150, 150),
                 Font = new Font("Arial", 9),
-                Location = new Point(120, 90),
-                Size = new Size(240, 20),
+                Location = new Point(116, 92),
+                Size = new Size(320, 18),
                 AutoSize = false
-            };
+            });
 
             cmbPosicion = new ComboBox
             {
-                Location = new Point(120, 110),
-                Size = new Size(245, 30),
-                BackColor = Color.FromArgb(40, 40, 40),
+                Location = new Point(116, 112),
+                Size = new Size(ancho - 128, 34),
+                BackColor = Color.FromArgb(38, 38, 38),
                 ForeColor = Color.White,
                 Font = new Font("Arial", 10),
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
-
             cmbPosicion.Items.AddRange(new object[]
             {
                 "Base (PG)", "Escolta (SG)", "Alero (SF)",
                 "Ala-Pívot (PF)", "Pívot (C)"
             });
-
             cmbPosicion.SelectedIndex = 0;
 
-            var btnAgregarJugador = CrearBoton(
-                "Agregar Jugador",
-                new Point(10, 150),
-                new Size(365, 35),
-                Color.FromArgb(50, 50, 50)
-            );
+            var btnAgregar = CrearBoton(
+                "+ Agregar jugador",
+                new Point(12, 160),
+                new Size(ancho - 24, 38),
+                Color.FromArgb(50, 80, 160));
+            btnAgregar.Click += BtnAgregarJugador_Click;
 
-            btnAgregarJugador.Click += BtnAgregarJugador_Click;
-
-            // Lista jugadores Y=195
-            panelJugadores = new Panel
+            // ── Panel lista de jugadores (más alto) ───────
+            var lblListaJug = new Label
             {
-                Location = new Point(10, 195),
-                Size = new Size(365, 80),
-                AutoScroll = true,
-                BackColor = Color.FromArgb(40, 40, 40)
+                Text = "Jugadores registrados en este equipo",
+                ForeColor = Color.FromArgb(150, 150, 150),
+                Font = new Font("Arial", 8),
+                Location = new Point(12, 210),
+                Size = new Size(ancho - 24, 16),
+                AutoSize = false
             };
 
-            // Botón nuevo equipo Y=285
-            var btnNuevoEquipo = CrearBoton(
-                "+ Agregar Nuevo Equipo",
-                new Point(10, 285),
-                new Size(365, 35),
-                Color.FromArgb(30, 30, 30)
-            );
+            panelJugadores = new Panel
+            {
+                Location = new Point(12, 228),
+                Size = new Size(ancho - 24, 100),  // más alto
+                AutoScroll = true,
+                BackColor = Color.FromArgb(28, 28, 28),
+                BorderStyle = BorderStyle.FixedSingle
+            };
 
+            var btnNuevoEquipo = CrearBoton(
+                "+ Registrar otro equipo",
+                new Point(12, 338),                       // debajo del panel
+                new Size(ancho - 24, 25),
+                Color.FromArgb(30, 30, 30));
             btnNuevoEquipo.Click += BtnNuevoEquipo_Click;
 
-            cardJugador.Controls.Add(lblSecJugador);
             cardJugador.Controls.Add(txtNombreJugador);
-            cardJugador.Controls.Add(lblNumero);
             cardJugador.Controls.Add(nudNumero);
-            cardJugador.Controls.Add(lblPosicion);
             cardJugador.Controls.Add(cmbPosicion);
-            cardJugador.Controls.Add(btnAgregarJugador);
+            cardJugador.Controls.Add(btnAgregar);
+            cardJugador.Controls.Add(lblListaJug);
             cardJugador.Controls.Add(panelJugadores);
             cardJugador.Controls.Add(btnNuevoEquipo);
-
             this.Controls.Add(cardJugador);
 
-            // =========================================
-            // SECCIÓN EQUIPOS REGISTRADOS
-            // =========================================
-            var lblEquiposReg = new Label
+            // =====================================================
+            // CARD — EQUIPOS REGISTRADOS  (ahora con altura real)
+            // =====================================================
+            this.Controls.Add(new Label
             {
                 Text = "Equipos registrados",
                 ForeColor = Color.White,
                 Font = new Font("Arial", 11, FontStyle.Bold),
-                Location = new Point(15, 590),
-                Size = new Size(385, 25),
+                Location = new Point(margen, 662),
+                Size = new Size(ancho, 19),
                 AutoSize = false
-            };
+            });
 
-            this.Controls.Add(lblEquiposReg);
-
+            // Panel con altura generosa y borde visible
             panelEquipos = new Panel
             {
-                Location = new Point(15, 620),
-                Size = new Size(385, 180),
+                Location = new Point(margen, 740),
+                Size = new Size(ancho, 130),   // antes 180 pero invisible
                 AutoScroll = true,
-                BackColor = Color.FromArgb(18, 18, 18)
+                BackColor = Color.FromArgb(24, 24, 24),
+                BorderStyle = BorderStyle.FixedSingle
             };
-
             this.Controls.Add(panelEquipos);
 
-            // =========================================
-            // BOTÓN FINALIZAR REGISTRO
-            // =========================================
+            // =====================================================
+            // BOTÓN FINALIZAR
+            // =====================================================
             var btnFinalizar = CrearBoton(
-                "Finalizar Registro y Generar Partidos",
-                new Point(15, 810),
-                new Size(385, 50),
-                Color.FromArgb(244, 123, 37)
-            );
-
+                "✓  Finalizar registro y generar partidos",
+                new Point(margen, 866),
+                new Size(ancho, 50),
+                Color.FromArgb(244, 123, 37));
+            btnFinalizar.Font = new Font("Arial", 11, FontStyle.Bold);
             btnFinalizar.Click += BtnFinalizar_Click;
-
             this.Controls.Add(btnFinalizar);
         }
 
@@ -248,47 +231,38 @@ namespace SwishApp.Vistas
         // =====================================================
         private void BtnGuardarEquipo_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombreEquipo.Text) ||
-                string.IsNullOrWhiteSpace(txtOrigen.Text) ||
-                string.IsNullOrWhiteSpace(txtCategoria.Text))
+            string nombre = txtNombreEquipo.Text.Trim();
+            string origen = txtOrigen.Text.Trim();
+            string categoria = txtCategoria.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombre) ||
+                nombre == "Nombre del equipo" ||
+                string.IsNullOrWhiteSpace(origen) ||
+                origen == "Origen o ciudad" ||
+                string.IsNullOrWhiteSpace(categoria) ||
+                categoria == "Categoría")
             {
-                MessageBox.Show(
-                    "Completa todos los campos del equipo.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso("Completa todos los campos del equipo.");
                 return;
             }
 
             var torneo = torneoDao.ObtenerUltimo();
-
-            var equipo = new Equipo
+            equipoDao.Insertar(new Equipo
             {
-                Nombre = txtNombreEquipo.Text.Trim(),
-                Origen = txtOrigen.Text.Trim(),
-                Categoria = txtCategoria.Text.Trim(),
+                Nombre = nombre,
+                Origen = origen,
+                Categoria = categoria,
                 IdTorneo = torneo.Id,
                 Estado = "ACTIVO",
                 Derrotas = 0
-            };
+            });
 
-            equipoDao.Insertar(equipo);
-
-            // Limpiar campos
-            txtNombreEquipo.Text = "";
-            txtOrigen.Text = "";
-            txtCategoria.Text = "";
-
+            LimpiarCamposEquipo();
             CargarEquipos();
             CargarJugadoresUltimoEquipo();
 
-            MessageBox.Show(
-                "Equipo guardado correctamente.",
-                "Éxito",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            MessageBox.Show("Equipo guardado correctamente.", "Éxito",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // =====================================================
@@ -296,56 +270,43 @@ namespace SwishApp.Vistas
         // =====================================================
         private void BtnAgregarJugador_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombreJugador.Text))
+            string nombre = txtNombreJugador.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombre) ||
+                nombre == "Nombre del jugador")
             {
-                MessageBox.Show(
-                    "Escribe el nombre del jugador.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso("Escribe el nombre del jugador.");
                 return;
             }
 
             var equipos = equipoDao.Listar();
-
             if (equipos.Count == 0)
             {
-                MessageBox.Show(
-                    "Primero registra un equipo.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso("Primero registra un equipo.");
                 return;
             }
 
-            var ultimoEquipo = equipos[equipos.Count - 1];
-
+            var ultimo = equipos[equipos.Count - 1];
             int numero = (int)nudNumero.Value;
 
-            if (jugadorDao.ExisteNumeroEnEquipo(numero, ultimoEquipo.Id))
+            if (jugadorDao.ExisteNumeroEnEquipo(numero, ultimo.Id))
             {
                 MessageBox.Show(
-                    "El número " + numero + " ya está registrado en este equipo.",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                    "El número " + numero + " ya está en este equipo.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var jugador = new Jugador
+            jugadorDao.Insertar(new Jugador
             {
-                Nombre = txtNombreJugador.Text.Trim(),
+                Nombre = nombre,
                 Numero = numero,
                 Posicion = cmbPosicion.SelectedItem.ToString(),
-                IdEquipo = ultimoEquipo.Id
-            };
+                IdEquipo = ultimo.Id
+            });
 
-            jugadorDao.Insertar(jugador);
-
-            txtNombreJugador.Text = "";
+            txtNombreJugador.Text = "Nombre del jugador";
+            txtNombreJugador.ForeColor = Color.FromArgb(120, 120, 120);
             nudNumero.Value = 0;
 
             CargarJugadoresUltimoEquipo();
@@ -357,51 +318,29 @@ namespace SwishApp.Vistas
         private void BtnNuevoEquipo_Click(object sender, EventArgs e)
         {
             var equipos = equipoDao.Listar();
-
             if (equipos.Count == 0)
             {
-                MessageBox.Show(
-                    "Primero guarda un equipo.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso("Primero guarda un equipo.");
                 return;
             }
 
-            var ultimoEquipo = equipos[equipos.Count - 1];
-            var jugadores = jugadorDao.ListarPorEquipo(ultimoEquipo.Id);
+            var ultimo = equipos[equipos.Count - 1];
+            var jugadores = jugadorDao.ListarPorEquipo(ultimo.Id);
 
             if (jugadores.Count < 5)
             {
-                MessageBox.Show(
-                    "El equipo " + ultimoEquipo.Nombre +
-                    " necesita mínimo 5 jugadores antes de agregar otro.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso(
+                    "El equipo \"" + ultimo.Nombre +
+                    "\" necesita mínimo 5 jugadores antes de continuar.");
                 return;
             }
 
-            // Limpiar campos para nuevo equipo
-            txtNombreEquipo.Text = "Nombre del equipo";
-            txtNombreEquipo.ForeColor = Color.FromArgb(120, 120, 120);
-
-            txtOrigen.Text = "Origen o ciudad";
-            txtOrigen.ForeColor = Color.FromArgb(120, 120, 120);
-
-            txtCategoria.Text = "Categoría";
-            txtCategoria.ForeColor = Color.FromArgb(120, 120, 120);
-
+            LimpiarCamposEquipo();
             panelJugadores.Controls.Clear();
 
             MessageBox.Show(
                 "Puedes registrar el siguiente equipo.",
-                "Listo",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+                "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // =====================================================
@@ -413,34 +352,22 @@ namespace SwishApp.Vistas
 
             if (equipos.Count < 2)
             {
-                MessageBox.Show(
-                    "Necesitas al menos 2 equipos para generar partidos.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MostrarAviso("Necesitas al menos 2 equipos para generar partidos.");
                 return;
             }
 
-            // Validar que cada equipo tenga mínimo 5 jugadores
             foreach (var eq in equipos)
             {
-                var jugadores = jugadorDao.ListarPorEquipo(eq.Id);
-
-                if (jugadores.Count < 5)
+                var jugs = jugadorDao.ListarPorEquipo(eq.Id);
+                if (jugs.Count < 5)
                 {
-                    MessageBox.Show(
-                        "El equipo " + eq.Nombre +
-                        " necesita mínimo 5 jugadores.",
-                        "Aviso",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
+                    MostrarAviso(
+                        "El equipo \"" + eq.Nombre +
+                        "\" necesita mínimo 5 jugadores.");
                     return;
                 }
             }
 
-            // Generar partidos
             GenerarPartidos(equipos);
 
             App.IdTorneoActivo = equipos[0].IdTorneo;
@@ -457,143 +384,152 @@ namespace SwishApp.Vistas
         {
             var partidoDao = new PartidoDao();
 
-            // Verificar solo partidos del torneo actual
             var existentes = partidoDao.ListarPorTorneo(equipos[0].IdTorneo);
             if (existentes.Count > 0) return;
 
-            int idEquipoBye = 0;
+            // Mezclar aleatoriamente
+            var rnd = new Random();
+            for (int i = equipos.Count - 1; i > 0; i--)
+            {
+                int j = rnd.Next(i + 1);
+                var tmp = equipos[i]; equipos[i] = equipos[j]; equipos[j] = tmp;
+            }
 
-            // BYE si número impar
+            int idBye = 0;
+
             if (equipos.Count % 2 != 0)
             {
-                var rnd = new Random();
-                int indice = rnd.Next(equipos.Count);
+                int indiceBye = rnd.Next(equipos.Count);
+                idBye = equipos[indiceBye].Id;
 
-                idEquipoBye = equipos[indice].Id;
-
-                var bye = new Partido
+                partidoDao.Insertar(new Partido
                 {
-                    Nombre = equipos[indice].Nombre + " BYE",
+                    Nombre = equipos[indiceBye].Nombre + " — BYE",
                     Estado = "FINALIZADO",
                     PuntosA = 0,
                     PuntosB = 0,
                     Fecha = DateTime.Now.ToString("yyyy-MM-dd"),
                     Bracket = "WINNERS",
                     Ronda = 1,
-                    IdEquipoA = idEquipoBye,
+                    IdEquipoA = idBye,
                     IdEquipoB = 0,
-                    IdTorneo = equipos[indice].IdTorneo,
-                    Ganador = idEquipoBye,
+                    IdTorneo = equipos[indiceBye].IdTorneo,
+                    Ganador = idBye,
                     Perdedor = 0,
                     Bye = true
-                };
-
-                partidoDao.Insertar(bye);
+                });
             }
 
-            // Partidos normales
             for (int i = 0; i < equipos.Count; i++)
             {
-                if (equipos[i].Id == idEquipoBye) continue;
+                if (equipos[i].Id == idBye) continue;
 
                 int j = i + 1;
-
-                while (j < equipos.Count &&
-                       equipos[j].Id == idEquipoBye)
-                    j++;
-
+                while (j < equipos.Count && equipos[j].Id == idBye) j++;
                 if (j >= equipos.Count) break;
 
-                var eqA = equipos[i];
-                var eqB = equipos[j];
-
-                var partido = new Partido
+                partidoDao.Insertar(new Partido
                 {
-                    Nombre = eqA.Nombre + " VS " + eqB.Nombre,
+                    Nombre = equipos[i].Nombre + " VS " + equipos[j].Nombre,
                     Estado = "PENDIENTE",
                     PuntosA = 0,
                     PuntosB = 0,
                     Fecha = DateTime.Now.ToString("yyyy-MM-dd"),
                     Bracket = "WINNERS",
                     Ronda = 1,
-                    IdEquipoA = eqA.Id,
-                    IdEquipoB = eqB.Id,
-                    IdTorneo = eqA.IdTorneo,
+                    IdEquipoA = equipos[i].Id,
+                    IdEquipoB = equipos[j].Id,
+                    IdTorneo = equipos[i].IdTorneo,
                     Bye = false
-                };
-
-                partidoDao.Insertar(partido);
+                });
 
                 i = j;
             }
         }
 
         // =====================================================
-        // CARGAR EQUIPOS
+        // CARGAR EQUIPOS REGISTRADOS
         // =====================================================
         private void CargarEquipos()
         {
             panelEquipos.Controls.Clear();
 
             var equipos = equipoDao.Listar();
-            int y = 0;
+            int y = 4;
+
+            if (equipos.Count == 0)
+            {
+                panelEquipos.Controls.Add(new Label
+                {
+                    Text = "Aún no hay equipos registrados.",
+                    ForeColor = Color.FromArgb(120, 120, 120),
+                    Font = new Font("Arial", 9),
+                    Location = new Point(8, 8),
+                    Size = new Size(420, 20),
+                    AutoSize = false
+                });
+                return;
+            }
 
             foreach (var eq in equipos)
             {
-                var card = new Panel
+                var fila = new Panel
                 {
-                    Location = new Point(0, y),
-                    Size = new Size(365, 60),
-                    BackColor = Color.FromArgb(28, 28, 28)
+                    Location = new Point(4, y),
+                    Size = new Size(panelEquipos.Width - 24, 52),
+                    BackColor = Color.FromArgb(32, 32, 32)
                 };
 
-                var lblNombre = new Label
+                // Franja de color izquierda
+                fila.Controls.Add(new Panel
+                {
+                    Location = new Point(0, 0),
+                    Size = new Size(4, 52),
+                    BackColor = Color.FromArgb(244, 123, 37)
+                });
+
+                fila.Controls.Add(new Label
                 {
                     Text = eq.Nombre,
                     ForeColor = Color.White,
                     Font = new Font("Arial", 10, FontStyle.Bold),
-                    Location = new Point(10, 8),
-                    Size = new Size(200, 20),
+                    Location = new Point(14, 6),
+                    Size = new Size(270, 20),
                     AutoSize = false
-                };
+                });
 
-                var lblInfo = new Label
+                fila.Controls.Add(new Label
                 {
-                    Text = eq.Origen + " -- " + eq.Categoria,
-                    ForeColor = Color.FromArgb(170, 170, 170),
+                    Text = eq.Origen + "  ·  " + eq.Categoria,
+                    ForeColor = Color.FromArgb(150, 150, 150),
                     Font = new Font("Arial", 8),
-                    Location = new Point(10, 32),
-                    Size = new Size(200, 20),
+                    Location = new Point(14, 28),
+                    Size = new Size(270, 18),
                     AutoSize = false
-                };
+                });
 
-                var btnEliminar = new Button
+                var btnX = new Button
                 {
-                    Text = "X",
-                    Location = new Point(320, 15),
-                    Size = new Size(35, 30),
-                    BackColor = Color.FromArgb(220, 53, 69),
+                    Text = "✕",
+                    Location = new Point(fila.Width - 40, 11),
+                    Size = new Size(30, 30),
+                    BackColor = Color.FromArgb(180, 40, 40),
                     ForeColor = Color.White,
                     FlatStyle = FlatStyle.Flat,
-                    Font = new Font("Arial", 9, FontStyle.Bold),
+                    Font = new Font("Arial", 10, FontStyle.Bold),
                     Cursor = Cursors.Hand,
                     Tag = eq.Id
                 };
-
-                btnEliminar.FlatAppearance.BorderSize = 0;
-                btnEliminar.Click += (s, ev) =>
+                btnX.FlatAppearance.BorderSize = 0;
+                btnX.Click += (s, ev) =>
                 {
-                    var btn = (Button)s;
-                    equipoDao.Eliminar((int)btn.Tag);
+                    equipoDao.Eliminar((int)((Button)s).Tag);
                     CargarEquipos();
                 };
 
-                card.Controls.Add(lblNombre);
-                card.Controls.Add(lblInfo);
-                card.Controls.Add(btnEliminar);
-
-                panelEquipos.Controls.Add(card);
-                y += 65;
+                fila.Controls.Add(btnX);
+                panelEquipos.Controls.Add(fila);
+                y += 58;
             }
         }
 
@@ -607,86 +543,106 @@ namespace SwishApp.Vistas
             var equipos = equipoDao.Listar();
             if (equipos.Count == 0) return;
 
-            var ultimoEquipo = equipos[equipos.Count - 1];
-            var jugadores = jugadorDao.ListarPorEquipo(ultimoEquipo.Id);
-
-            int y = 0;
+            var ultimo = equipos[equipos.Count - 1];
+            var jugadores = jugadorDao.ListarPorEquipo(ultimo.Id);
+            int y = 2;
 
             foreach (var j in jugadores)
             {
                 var fila = new Panel
                 {
-                    Location = new Point(0, y),
-                    Size = new Size(360, 30),
-                    BackColor = Color.FromArgb(40, 40, 40)
+                    Location = new Point(2, y),
+                    Size = new Size(panelJugadores.Width - 20, 28),
+                    BackColor = Color.FromArgb(38, 38, 38)
                 };
 
-                var lbl = new Label
+                fila.Controls.Add(new Label
                 {
-                    Text = "#" + j.Numero + " " + j.Nombre,
+                    Text = "#" + j.Numero + "  " + j.Nombre +
+                                "  ·  " + j.Posicion,
                     ForeColor = Color.White,
                     Font = new Font("Arial", 9),
-                    Location = new Point(5, 5),
-                    Size = new Size(270, 20),
+                    Location = new Point(6, 5),
+                    Size = new Size(fila.Width - 40, 18),
                     AutoSize = false
-                };
+                });
 
-                var btnEliminar = new Button
+                var btnX = new Button
                 {
-                    Text = "X",
-                    Location = new Point(320, 3),
-                    Size = new Size(30, 24),
-                    BackColor = Color.FromArgb(220, 53, 69),
+                    Text = "✕",
+                    Location = new Point(fila.Width - 28, 3),
+                    Size = new Size(22, 22),
+                    BackColor = Color.FromArgb(180, 40, 40),
                     ForeColor = Color.White,
                     FlatStyle = FlatStyle.Flat,
                     Font = new Font("Arial", 8, FontStyle.Bold),
                     Cursor = Cursors.Hand,
                     Tag = j.Id
                 };
-
-                btnEliminar.FlatAppearance.BorderSize = 0;
-                btnEliminar.Click += (s, ev) =>
+                btnX.FlatAppearance.BorderSize = 0;
+                btnX.Click += (s, ev) =>
                 {
-                    var btn = (Button)s;
-                    var jugActual = jugadorDao.ListarPorEquipo(ultimoEquipo.Id);
-
-                    if (jugActual.Count <= 5)
+                    var jugs = jugadorDao.ListarPorEquipo(ultimo.Id);
+                    if (jugs.Count <= 5)
                     {
                         MessageBox.Show(
                             "El equipo necesita mínimo 5 jugadores.",
-                            "Error",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
-                    jugadorDao.Eliminar((int)btn.Tag);
+                    jugadorDao.Eliminar((int)((Button)s).Tag);
                     CargarJugadoresUltimoEquipo();
                 };
 
-                fila.Controls.Add(lbl);
-                fila.Controls.Add(btnEliminar);
+                fila.Controls.Add(btnX);
                 panelJugadores.Controls.Add(fila);
-
-                y += 32;
+                y += 30;
             }
         }
 
         // =====================================================
         // HELPERS
         // =====================================================
+        private void LimpiarCamposEquipo()
+        {
+            ResetTextBox(txtNombreEquipo, "Nombre del equipo");
+            ResetTextBox(txtOrigen, "Origen o ciudad");
+            ResetTextBox(txtCategoria, "Categoría");
+        }
+
+        private void ResetTextBox(TextBox txt, string placeholder)
+        {
+            txt.Text = placeholder;
+            txt.ForeColor = Color.FromArgb(120, 120, 120);
+        }
+
+        private void MostrarAviso(string msg)
+        {
+            MessageBox.Show(msg, "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private Label CrearSectionLabel(string texto, Point ubicacion)
+        {
+            return new Label
+            {
+                Text = texto,
+                ForeColor = Color.FromArgb(244, 123, 37),
+                Font = new Font("Arial", 10, FontStyle.Bold),
+                Location = ubicacion,
+                Size = new Size(420, 22),
+                AutoSize = false
+            };
+        }
+
         private Panel CrearCard(Point ubicacion, Size tamaño)
         {
-            var card = new Panel
+            return new Panel
             {
                 Location = ubicacion,
                 Size = tamaño,
-                BackColor = Color.FromArgb(28, 28, 28),
-                Padding = new Padding(10)
+                BackColor = Color.FromArgb(26, 26, 26)
             };
-
-            return card;
         }
 
         private TextBox CrearTextBox(string placeholder, Point ubicacion)
@@ -694,38 +650,21 @@ namespace SwishApp.Vistas
             var txt = new TextBox
             {
                 Location = ubicacion,
-                Size = new Size(365, 30),
-                BackColor = Color.FromArgb(40, 40, 40),
-                //ForeColor = Color.White,
+                Size = new Size(424, 34),
+                BackColor = Color.FromArgb(38, 38, 38),
                 Font = new Font("Arial", 10),
                 BorderStyle = BorderStyle.FixedSingle,
                 Text = placeholder,
                 ForeColor = Color.FromArgb(120, 120, 120)
             };
 
-            txt.GotFocus += (s, e) =>
-            {
-                if (txt.Text == placeholder)
-                {
-                    txt.Text = "";
-                    txt.ForeColor = Color.White;
-                }
-            };
-
-            txt.LostFocus += (s, e) =>
-            {
-                if (string.IsNullOrWhiteSpace(txt.Text))
-                {
-                    txt.Text = placeholder;
-                    txt.ForeColor = Color.FromArgb(120, 120, 120);
-                }
-            };
+            txt.GotFocus += (s, e) => { if (txt.Text == placeholder) { txt.Text = ""; txt.ForeColor = Color.White; } };
+            txt.LostFocus += (s, e) => { if (string.IsNullOrWhiteSpace(txt.Text)) { txt.Text = placeholder; txt.ForeColor = Color.FromArgb(120, 120, 120); } };
 
             return txt;
         }
 
-        private Button CrearBoton(
-            string texto, Point ubicacion, Size tamaño, Color color)
+        private Button CrearBoton(string texto, Point ubicacion, Size tamaño, Color color)
         {
             var btn = new Button
             {
@@ -738,9 +677,7 @@ namespace SwishApp.Vistas
                 Font = new Font("Arial", 10, FontStyle.Bold),
                 Cursor = Cursors.Hand
             };
-
             btn.FlatAppearance.BorderSize = 0;
-
             return btn;
         }
 
@@ -748,7 +685,6 @@ namespace SwishApp.Vistas
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect, int nTopRect,
             int nRightRect, int nBottomRect,
-            int nWidthEllipse, int nHeightEllipse
-        );
+            int nWidthEllipse, int nHeightEllipse);
     }
 }

@@ -30,7 +30,7 @@ namespace SwishApp.Vistas
             this.ForeColor = Color.White;
             this.Text = "Registro de Usuario";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(400, 560);
+            this.Size = new Size(520, 680);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
@@ -41,28 +41,28 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 20, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 30),
+                Location = new Point(60, 35),
                 Size = new Size(400, 40),
                 AutoSize = false
             };
 
             // Campos
-            txtNombre = CrearCampo("Nombre completo", new Point(30, 90), false);
-            txtUsername = CrearCampo("Usuario", new Point(30, 160), false);
-            txtPassword = CrearCampo("Contraseña", new Point(30, 230), true);
-            txtConfirmar = CrearCampo("Confirmar contraseña", new Point(30, 300), true);
+            txtNombre = CrearCampo("Nombre completo", new Point(80, 90), false);
+            txtUsername = CrearCampo("Usuario", new Point(80, 160), false);
+            txtPassword = CrearCampo("Contraseña", new Point(80, 230), true);
+            txtConfirmar = CrearCampo("Confirmar contraseña", new Point(80, 300), true);
 
-            var lblNombre = CrearLabel("Nombre completo", new Point(30, 72));
-            var lblUsername = CrearLabel("Usuario", new Point(30, 142));
-            var lblPassword = CrearLabel("Contraseña", new Point(30, 212));
-            var lblConfirmar = CrearLabel("Confirmar contraseña", new Point(30, 282));
+            var lblNombre = CrearLabel("Nombre completo", new Point(80, 72));
+            var lblUsername = CrearLabel("Usuario", new Point(80, 142));
+            var lblPassword = CrearLabel("Contraseña", new Point(80, 212));
+            var lblConfirmar = CrearLabel("Confirmar contraseña", new Point(80, 282));
 
             // Botón registrar
             var btnRegistrar = new Button
             {
                 Text = "Crear Cuenta",
-                Location = new Point(30, 365),
-                Size = new Size(340, 48),
+                Location = new Point(60, 365),
+                Size = new Size(400, 48),
                 BackColor = Color.FromArgb(244, 123, 37),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -80,7 +80,7 @@ namespace SwishApp.Vistas
                 ForeColor = Color.FromArgb(244, 123, 37),
                 Font = new Font("Arial", 9, FontStyle.Underline),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(0, 430),
+                Location = new Point(60, 430),
                 Size = new Size(400, 25),
                 AutoSize = false,
                 Cursor = Cursors.Hand
